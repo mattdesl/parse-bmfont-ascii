@@ -1,0 +1,43 @@
+{
+  "name": "parse-bmfont-ascii",
+  "version": "1.0.0",
+  "description": "parses BMFont files (text) to a JavaScript object",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "ascii",
+    "bmfont",
+    "bm",
+    "bitmap",
+    "font",
+    "bitmaps",
+    "angel",
+    "angelcode",
+    "code",
+    "text",
+    "gl",
+    "sprite",
+    "sprites",
+    "stackgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/parse-bmfont-ascii.git"
+  },
+  "homepage": "https://github.com/Jam3/parse-bmfont-ascii",
+  "bugs": {
+    "url": "https://github.com/Jam3/parse-bmfont-ascii/issues"
+  }
+}
