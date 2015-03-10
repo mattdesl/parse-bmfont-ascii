@@ -34,10 +34,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Jam3/parse-bmfont-ascii.git"
+    "url": "git://github.com/mattdesl/parse-bmfont-ascii.git"
   },
-  "homepage": "https://github.com/Jam3/parse-bmfont-ascii",
+  "homepage": "https://github.com/mattdesl/parse-bmfont-ascii",
   "bugs": {
-    "url": "https://github.com/Jam3/parse-bmfont-ascii/issues"
+    "url": "https://github.com/mattdesl/parse-bmfont-ascii/issues"
   }
 }
