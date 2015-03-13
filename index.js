@@ -14,11 +14,11 @@ module.exports = function parseBMFontAscii(data) {
   if (lines.length === 0)
     throw new Error('no data in BMFont file')
 
-  var parsingChars = false
-  var parsingKern = false
-
   for (var i = 0; i < lines.length; i++) {
     var lineData = splitLine(lines[i], i)
+    if (!lineData) //skip empty lines
+      continue
+
     if (lineData.key === 'page') {
       if (typeof lineData.data.id !== 'number')
         throw new Error('malformed file at line ' + i + ' -- needs page id=N')
@@ -40,10 +40,13 @@ module.exports = function parseBMFontAscii(data) {
 }
 
 function splitLine(line, idx) {
-  line = line.trim()
+  line = line.replace(/\t+/g, ' ').trim()
+  if (!line)
+    return null
+
   var space = line.indexOf(' ')
-  if (space === -1)
-    throw "no named row at line " + idx
+  if (space === -1) 
+    throw new Error("no named row at line " + idx)
 
   var key = line.substring(0, space)
 
