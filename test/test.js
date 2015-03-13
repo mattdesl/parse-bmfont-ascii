@@ -6,6 +6,20 @@ var parse = require('../')
 var ExpectedNexa = require('./NexaLight32.json')
 var ExpectedGlyphite = require('./Glyphite.json')
 
+test('should parse GlyphDesigner text', function(t) {
+  t.plan(3)
+  var file = path.join(__dirname, 'MarkerFelt-text.fnt')
+  fs.readFile(file, function(err, data) {
+    if (err)
+      t.fail(err)
+
+    var result = parse(data)
+    t.equal(result.chars.length, 94, 'chars parsed')
+    t.equal(result.common.lineHeight, 47, 'lineHeight parsed')
+    t.equal(result.pages[0], 'MarkerFelt.png', 'pages parsed')  
+  })
+})
+
 test('should parse fnt as object', function(t) {
   t.plan(5)
   var file = path.join(__dirname, 'NexaLight32.fnt')

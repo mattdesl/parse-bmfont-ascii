@@ -51,9 +51,12 @@ function splitLine(line, idx) {
   var key = line.substring(0, space)
 
   line = line.substring(space + 1)
+  //clear "letter" field as it is non-standard and
+  //requires additional complexity to parse " / = symbols
+  line = line.replace(/letter=[\'\"]\S+[\'\"]/gi, '')  
   line = line.split("=")
   line = line.map(function(str) {
-    return str.match((/(".*?"|[^"\s]+)+(?=\s*|\s*$)/g))
+    return str.trim().match((/(".*?"|[^"\s]+)+(?=\s*|\s*$)/g))
   })
 
   var data = []
