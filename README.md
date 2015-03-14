@@ -21,10 +21,9 @@ fs.readFileSync(__dirname+'/Arial.fnt', function(err, data) {
 
 The spec for the returned JSON object is [here](https://github.com/mattdesl/bmfont2json/wiki/JsonSpec). The input data should match the spec, see [test/Nexa Light-32.fnt](test/Nexa Light-32.fnt) for an example.
 
-Related modules:
+## See Also
 
-- [parse-bmfont-xml](https://www.npmjs.com/package/parse-bmfont-xml) - parses XML fonts
-- [bmfon2json](https://github.com/mattdesl/bmfont2json) - wraps this module as a CLI tool
+See [text-modules](https://github.com/mattdesl/text-modules) for related modules.
 
 ## Usage
 
